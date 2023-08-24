@@ -7,10 +7,6 @@
             <div class="my-5 text-white">
                 <h1 >{{$post->title}}</h1>
             </div>
-            <div>
-                
-            </div>
-
         </div>
     </div>
 </div>
