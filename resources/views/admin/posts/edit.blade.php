@@ -17,7 +17,7 @@
                         <input class="form-control @error('title')is-invalid @enderror" type="text" name="title"
                             id="title" placeholder="Titolo" value="{{ old('title') ?? $post->title }}">
                         @error('title')
-                            <div class="text-danger">{{ $messages }}</div>
+                            <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group mt-4">
