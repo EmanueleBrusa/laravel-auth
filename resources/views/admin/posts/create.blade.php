@@ -13,6 +13,9 @@
                     <div class="form-group mt-4">
                         <label class="contol-lable">Titolo</label>
                         <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="title" placeholder="Titolo" value="{{ old('title') }}">
+                        @error('title')
+                            <div class="text-danger">{{ $messages }}</div>
+                        @enderror
                     </div>
                     <div class="form-group mt-4">
                         <label class="contol-lable">Contenuto</label>
