@@ -43,6 +43,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <a class="btn btn-success btn-sm" href="{{ route('admin.posts.create', $post->id) }}">Nuovo Post</a>
             </div>
         </div>
     </div>
