@@ -44,11 +44,11 @@ class PostController extends Controller
 
         $post= new Post();
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('cover_image')) {
 
-            $path = Storage::put('posts_image', $request->image);
+            $path = Storage::put('posts_image', $request->cover_image);
 
-            $form_data['image'] = $path;
+            $form_data['cover_image'] = $path;
         }
         
         $form_data['slug'] =  $post->generateSlug($form_data['title']);
