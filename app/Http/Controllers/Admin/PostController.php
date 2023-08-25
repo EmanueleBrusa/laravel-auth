@@ -40,7 +40,9 @@ class PostController extends Controller
     {
         $form_data= $request->all();
 
-        $post= new PortfolioModel();
+        $post= new Post();
+
+        $form_data['slug'] =  $post->generateSlug($form_data['title']);
         $post->fill($form_data);
 
         $post->save();
