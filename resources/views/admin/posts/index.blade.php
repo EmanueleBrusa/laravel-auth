@@ -31,8 +31,8 @@
                                 <td class="bg-primary-subtle fw-bold">
                                     <a class="btn btn-success btn-sm" href="{{route('admin.posts.show', $post->id)}}"><i class="fas fa-eye"></i></a>
                                     <a class="btn btn-warning btn-sm" href=""><i class="fas fa-pen"></i></a>
-                                    <form class="d-inline-block" action="#"
-                                        onsubmit="return confirm('Sei sicuro di voler cancellare questo fumetto?')"
+                                    <form class="d-inline-block" action="{{ route('admin.posts.destroy', $post->id) }}"
+                                        onsubmit="return confirm('Sei sicuro di voler cancellare questo post?')"
                                         method="POST">
                                         @csrf
                                         @method('DELETE')
@@ -43,7 +43,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <a class="btn btn-success btn-sm" href="{{ route('admin.posts.create', $post->id) }}">Nuovo Post</a>
+                <a class="btn btn-success btn-sm" href="{{ route('admin.posts.create') }}">Nuovo Post</a>
             </div>
         </div>
     </div>
